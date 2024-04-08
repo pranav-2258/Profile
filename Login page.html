@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Person Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+    }
+   .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 85%;
+      background-color: #f0776a;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(241, 232, 232, 0.1);
+      overflow: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #131212;
+    }
+   .profile-info {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 95%;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+   .profile-info > div {
+      flex: 1 1 50%;
+      padding: 10px;
+    }
+   .profile-info img {
+      width: 20%;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(240, 12, 12, 0.1);
+      justify-content: center;
+      align-items: center;
+    }
+   .profile-info.details {
+      text-align: right;
+      color: #f90404;
+    }
+   .avatar {
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 100%;
+      margin-right: 0px;
+
+    }
+    #screenshot {
+  display: block;
+  margin: 20px auto;
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Person Profile</h1>
+    <div class="profile-info">
+      <div class="avatar">
+        <img src="C:\Users\hp\OneDrive\Documents\HTML\WhatsApp Image 2024-04-07 at 20.30.23_44fa6f3c.jpg">
+      </div>
+      <div class="details">
+        <h2>Name: Pranav Sharma</h2>
+        <p>Email: pranav2258.be23@chitkara.edu.in</p>
+        <p>University: Chitkara University</p>
+        <p>Occupation: Student</p>
+        <button onclick="toggleBio()">About me</button>
+        <p id="bio" style="display: none;"><b>Bio:</b>I'm Pranav Sharma, a passionate student at Chitkara University, where I'm pursuing my Bachelor of Technology in Computer Science. I stand 6 feet tall, not just physically, but also in my aspirations. I have a dream to use technology to make a significant impact on the world.
+
+          Music and badminton are my go-to hobbies. They provide me with the perfect balance to my academic pursuits. I also love to read and immerse myself in books whenever I get the chance. It's a great way to broaden my horizons and learn new things.
+          
+          I'm known for my leadership skills and my ability to inspire others. I believe in the power of teamwork and am always ready to help my peers. I'm resilient and maintain a positive attitude, even when faced with challenges.
+          
+          In the future, I aspire to use my education and skills to create technological solutions that will benefit society. I'm determined and passionate, and I'm confident that I'm on the path to achieving my dreams.  </p>
+        <button onclick="toggleProject()">My Projects</button>
+        <p id="project" style="display: none;">
+        <img id="screenshot" src="C:\Users\hp\OneDrive\Documents\HTML\Screenshot 2024-04-07 214454.jpg">
+          <b>Project 1:</b>Welcome to HealthFit, your personal health guide.
+        Our Story: HealthFit was born out of a shared passion for health and well-being. We realized the need for a platform that could provide individuals with the tools and insights they need to understand their current health status and make informed decisions about their lifestyle.
+        
+        Our Vision: Our vision is to empower individuals to take control of their health. We believe that everyone deserves access to the tools and information necessary to lead a healthy lifestyle.
+        
+        Our Mission: Our mission is to provide a comprehensive health and fitness platform. By using simple data like height, weight, age, and heart rate, we provide insights into your health status. Our tools include a BMI Calculator, Calorie Calculator, Ideal Weight Calculator, and more.
+        
+        Our Promise: With HealthFit, you’re not just tracking your health, you’re taking the first step towards a healthier, happier you. We are committed to supporting you on this journey.
+        
+        Join us at HealthFit, and take a step towards a healthier you. Welcome aboard and check it on my github account! </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleBio() {
+      var bio = document.getElementById("bio");
+      if (bio.style.display === "none") {
+        bio.style.display = "block";
+      } else {
+        bio.style.display = "none";
+      }
+    }
+
+    function toggleProject() {
+      var project = document.getElementById("project");
+      if (project.style.display === "none") {
+        project.style.display = "block";
+      } else {
+        project.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
